@@ -13,5 +13,6 @@ class stringarray
         System.out.println("element at"+(j+1)+":"+array[j]);
     }
 scanner.close();
+
 }
-    }
+}
