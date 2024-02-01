@@ -29,6 +29,6 @@ public class Reference {
         System.out.println("Position in Company: " + referencePosition);
         System.out.println("How You Know the Reference: " + howYouKnowReference);
         System.out.println("Years Known: " + yearsKnown);    
-        scanner.close();
+        
     }
 } 

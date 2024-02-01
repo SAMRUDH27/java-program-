@@ -47,7 +47,7 @@ public class OnlineResumeSystem {
         String educationalinstitutionlocation = scanner.nextLine();
         System.out.print("Enter Extracurricular Activities : ");
         String extracurricularactivities  = scanner.nextLine();
-        // Work Experience
+        
         System.out.println("\nWork Experience:");
         System.out.print("Enter Company Name: ");
         String companyName = scanner.nextLine();
@@ -112,7 +112,7 @@ public class OnlineResumeSystem {
         String challengesFaced = scanner.nextLine();
         System.out.print("Enter Lessons Learned: ");
         String lessonsLearned = scanner.nextLine();
-        // Certifications
+        
         System.out.println("\nCertifications:");
         System.out.print("Enter Certification Name: ");
         String certificationName = scanner.nextLine();
@@ -135,7 +135,7 @@ public class OnlineResumeSystem {
         System.out.print("Enter Renewal Status (true/false): ");
         boolean renewalStatus = scanner.nextBoolean();
         scanner.nextLine(); 
-        // Languages
+        
         System.out.println("\nLanguages:");
         System.out.print("Enter Language Name: ");
         String languageName = scanner.nextLine();
@@ -158,7 +158,7 @@ public class OnlineResumeSystem {
         String languageCertificationDate = scanner.nextLine();
         System.out.print("Enter Certification Level: ");
         String languageCertificationLevel = scanner.nextLine();
-        // Hobbies and Interests
+        
         System.out.println("\nHobbies and Interests:");
         System.out.print("Enter Hobby/Interest Name: ");
         String hobbyName = scanner.nextLine();
@@ -182,7 +182,7 @@ public class OnlineResumeSystem {
         String hobbyCertificationDate = scanner.nextLine();
         System.out.print("Enter Certification Level: ");
         String hobbyCertificationLevel = scanner.nextLine();
-        // References
+        
         System.out.println("\nReferences:");
         System.out.print("Enter Reference Name: ");
         String referenceName = scanner.nextLine();
@@ -200,7 +200,7 @@ public class OnlineResumeSystem {
         String howYouKnowReference = scanner.nextLine();
         System.out.print("Enter Years Known: ");
         int yearsKnown = scanner.nextInt();
-        // Personal Statement
+        
         System.out.println("\nPersonal Statement:");
         System.out.print("Enter Introduction: ");
         String introduction = scanner.nextLine();
@@ -222,7 +222,7 @@ public class OnlineResumeSystem {
         String longTermGoals = scanner.nextLine();
         System.out.print("Enter Short-term Goals: ");
         String shortTermGoals = scanner.nextLine();
-        // Display 
+         
         System.out.println("\nUser Profile:");
         System.out.println("Full Name: " + fullName);
         System.out.println("Contact Number: " + contactNumber);

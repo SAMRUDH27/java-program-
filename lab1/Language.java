@@ -38,6 +38,6 @@ public class Language {
         System.out.println("Certification Authority: " + languageCertificationAuthority);
         System.out.println("Certification Date: " + languageCertificationDate);
         System.out.println("Certification Level: " + languageCertificationLevel);
-        scanner.close();
+      
     }
 }

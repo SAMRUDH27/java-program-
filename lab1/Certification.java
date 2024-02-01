@@ -36,6 +36,6 @@ public class Certification {
         System.out.println("Renewal Requirements: " + renewalRequirements);
         System.out.println("Renewal Deadline: " + renewalDeadline);
         System.out.println("Renewal Status: " + renewalStatus);
-        scanner.close();
+        
     }
 }

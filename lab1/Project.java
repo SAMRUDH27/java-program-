@@ -37,6 +37,6 @@ public class Project {
         System.out.println("Project Outcome: " + projectOutcome);
         System.out.println("Challenges Faced: " + challengesFaced);
         System.out.println("Lessons Learned: " + lessonsLearned);
-        scanner.close();
+       
     }
 }

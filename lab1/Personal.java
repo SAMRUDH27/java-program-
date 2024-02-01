@@ -36,6 +36,6 @@ public class Personal {
         System.out.println("Long-term Goals: " + longTermGoals);
         System.out.println("Short-term Goals: " + shortTermGoals);
 
-        scanner.close();
+       
     }
 }

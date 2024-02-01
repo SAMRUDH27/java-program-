@@ -37,6 +37,6 @@ public class Hobbies {
         System.out.println("Certification Authority: " + hobbyCertificationAuthority);
         System.out.println("Certification Date: " + hobbyCertificationDate);
         System.out.println("Certification Level: " + hobbyCertificationLevel);
-        scanner.close();
+        
     }
 }

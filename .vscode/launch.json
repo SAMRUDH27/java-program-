@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Profile",
+            "request": "launch",
+            "mainClass": "Profile",
+            "projectName": "java2sem_ffed4d19"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"

@@ -36,6 +36,6 @@ public class Work {
         System.out.println("Contact Number of Supervisor: " + contactnumberofsupervisor);
         System.out.println("Email of Supervisor: " + emailofsupervisor);
 
-        scanner.close();
+        
         }
     }

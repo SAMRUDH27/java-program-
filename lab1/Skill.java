@@ -35,6 +35,6 @@ public class Skill {
         System.out.println("Project Management: " + projectmanagement);
         System.out.println("Collaboration Tools: " + collaborationtools);
         System.out.println("Problem Solving: " + problemsolving);
-        scanner.close();
+        
     }
 }
