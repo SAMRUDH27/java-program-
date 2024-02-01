@@ -1,36 +1,23 @@
 import java.util.Scanner;
 
-public class Education {
+//  abstractclas
+abstract class EducationBase {
+    
+    protected String degreeName;
+    protected String universityName;
+    protected String fieldOfStudy;
+    protected int graduationYear;
+    protected double gpa;
+    protected String honorsAwards;
+    protected String relevantCourses;
+    protected String thesisTitle;
+    protected String educationalInstitutionLocation;
+    protected String extracurricularActivities;
 
-    private String degreeName;
-    private String universityName;
-    private String fieldOfStudy;
-    private int graduationYear;
-    private double gpa;
-    private String honorsAwards;
-    private String relevantCourses;
-    private String thesisTitle;
-    private String educationalInstitutionLocation;
-    private String extracurricularActivities;
-
-    // Default constructor
-    public Education() {
-        this.degreeName = "Not Specified";
-        this.universityName = "Not Specified";
-        this.fieldOfStudy = "Not Specified";
-        this.graduationYear = 0;
-        this.gpa = 0.0;
-        this.honorsAwards = "Not Specified";
-        this.relevantCourses = "Not Specified";
-        this.thesisTitle = "Not Specified";
-        this.educationalInstitutionLocation = "Not Specified";
-        this.extracurricularActivities = "Not Specified";
-    }
-
-    // Constructor with parameters
-    public Education(String degreeName, String universityName, String fieldOfStudy, int graduationYear,
-                     double gpa, String honorsAwards, String relevantCourses, String thesisTitle,
-                     String educationalInstitutionLocation, String extracurricularActivities) {
+    // Parameterconstructor 
+    public EducationBase(String degreeName, String universityName, String fieldOfStudy, int graduationYear,
+                         double gpa, String honorsAwards, String relevantCourses, String thesisTitle,
+                         String educationalInstitutionLocation, String extracurricularActivities) {
         this.degreeName = degreeName;
         this.universityName = universityName;
         this.fieldOfStudy = fieldOfStudy;
@@ -43,12 +30,49 @@ public class Education {
         this.extracurricularActivities = extracurricularActivities;
     }
 
-    // Function overloading
-    public void input() {
+    // Abstractmethod 
+    abstract void display();
+}
+
+//  extendsEducationBase
+public class Education extends EducationBase {
+
+    // Default constructor using super keywordcall the supclass
+    public Education() {
+        super("Not Specified", "Not Specified", "Not Specified", 0, 0.0,
+              "Not Specified", "Not Specified", "Not Specified", "Not Specified", "Not Specified");
+    }
+
+    
+    public Education(String degreeName, String universityName, String fieldOfStudy, int graduationYear,
+                     double gpa, String honorsAwards, String relevantCourses, String thesisTitle,
+                     String educationalInstitutionLocation, String extracurricularActivities) {
+        super(degreeName, universityName, fieldOfStudy, graduationYear, gpa,
+              honorsAwards, relevantCourses, thesisTitle, educationalInstitutionLocation, extracurricularActivities);
+    }
+
+    // Overridefromabstract
+    @Override
+    public void display() {
+        System.out.println("\nEducation Details:");
+        System.out.println("Degree Name: " + degreeName);
+        System.out.println("University Name: " + universityName);
+        System.out.println("Major/Field of Study: " + fieldOfStudy);
+        System.out.println("Graduation Year: " + graduationYear);
+        System.out.println("GPA: " + gpa);
+        System.out.println("Honors/Awards: " + honorsAwards);
+        System.out.println("Relevant Courses: " + relevantCourses);
+        System.out.println("Thesis Title: " + thesisTitle);
+        System.out.println("Educational Institution Location: " + educationalInstitutionLocation);
+        System.out.println("Extracurricular Activities: " + extracurricularActivities);
+    }
+
+    // Function overloading final 
+    public final void input() {
         input(true);
     }
 
-    public void input(boolean askDegreeName) {
+    public final void input(boolean askDegreeName) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("\nEducation Details:");
@@ -73,7 +97,7 @@ public class Education {
         graduationYear = scanner.nextInt();
         System.out.print("Enter GPA: ");
         gpa = scanner.nextDouble();
-        scanner.nextLine(); 
+        scanner.nextLine();
         System.out.print("Enter Honors/Awards: ");
         honorsAwards = scanner.nextLine();
         System.out.print("Enter Relevant Courses: ");
@@ -86,36 +110,19 @@ public class Education {
         extracurricularActivities = scanner.nextLine();
     }
 
-    
-    public void display() {
-        System.out.println("\nEducation Details:");
-        System.out.println("Degree Name: " + degreeName);
-        System.out.println("University Name: " + universityName);
-        System.out.println("Major/Field of Study: " + fieldOfStudy);
-        System.out.println("Graduation Year: " + graduationYear);
-        System.out.println("GPA: " + gpa);
-        System.out.println("Honors/Awards: " + honorsAwards);
-        System.out.println("Relevant Courses: " + relevantCourses);
-        System.out.println("Thesis Title: " + thesisTitle);
-        System.out.println("Educational Institution Location: " + educationalInstitutionLocation);
-        System.out.println("Extracurricular Activities: " + extracurricularActivities);
-    }
-
     public static void main(String[] args) {
-        
-        Education educationDefault = new Education();
-        educationDefault.input();
-        educationDefault.display();
-
-        
-        Education educationParameterized = new Education("Bca in Computer Science", "jain University", "Computer Science", 2022,
+        // Creating an array of object
+        Education[] educationArray = new Education[3];
+        educationArray[0] = new Education();
+        educationArray[0].input();
+        educationArray[1] = new Education("Bca in Computer Science", "jain University", "Computer Science", 2022,
                 3.8, "dean List", "Data Structures, Algorithms", "Efficient Sorting Algorithms",
                 "City, Country", "Programming Club");
-        educationParameterized.display();
+        educationArray[2] = new Education();
+        educationArray[2].input(false);
 
-        
-        Education educationFunctionOverloading = new Education();
-        educationFunctionOverloading.input(false); 
-        educationFunctionOverloading.display();
+        for (Education education : educationArray) {
+            education.display();
+        }
     }
 }
